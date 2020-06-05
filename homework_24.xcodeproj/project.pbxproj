@@ -3,27 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96E96416150EF800494B71A9 /* Pods_homework_24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C3B60F5250C24D758CEA1D /* Pods_homework_24.framework */; };
+		AB558ACD2454CAE00069FB40 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB558ACC2454CAE00069FB40 /* MainTableViewCell.swift */; };
+		AB558ACF2454CD0F0069FB40 /* ReminderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB558ACE2454CD0F0069FB40 /* ReminderInfo.swift */; };
+		AB558AD12454D1200069FB40 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB558AD02454D1200069FB40 /* UIViewController+Helpers.swift */; };
 		AB7261AC24490DC70063F0BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7261AB24490DC70063F0BF /* AppDelegate.swift */; };
 		AB7261AE24490DC70063F0BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7261AD24490DC70063F0BF /* SceneDelegate.swift */; };
-		AB7261B024490DC70063F0BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7261AF24490DC70063F0BF /* ViewController.swift */; };
+		AB7261B024490DC70063F0BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7261AF24490DC70063F0BF /* MainViewController.swift */; };
 		AB7261B324490DC70063F0BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7261B124490DC70063F0BF /* Main.storyboard */; };
 		AB7261B524490DC80063F0BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7261B424490DC80063F0BF /* Assets.xcassets */; };
 		AB7261B824490DC80063F0BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7261B624490DC80063F0BF /* LaunchScreen.storyboard */; };
+		AB7F34F9245762D200C07C60 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F34F8245762D200C07C60 /* InfoViewController.swift */; };
+		AB7F34FB24771D7B00C07C60 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F34FA24771D7B00C07C60 /* FirstTableViewCell.swift */; };
+		AB7F34FD24771D9F00C07C60 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F34FC24771D9F00C07C60 /* SecondTableViewCell.swift */; };
+		AB7F34FF24771DBB00C07C60 /* ThirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F34FE24771DBB00C07C60 /* ThirdTableViewCell.swift */; };
+		AB7F350124771DD000C07C60 /* FourthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F350024771DD000C07C60 /* FourthTableViewCell.swift */; };
+		AB7F3503247AFFCC00C07C60 /* PriorityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F3502247AFFCC00C07C60 /* PriorityDetailViewController.swift */; };
+		AB7F3507247B020400C07C60 /* PriorityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F3506247B020400C07C60 /* PriorityDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB7261A824490DC70063F0BF /* homework_24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework_24.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C3B60F5250C24D758CEA1D /* Pods_homework_24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homework_24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB558ACC2454CAE00069FB40 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		AB558ACE2454CD0F0069FB40 /* ReminderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderInfo.swift; sourceTree = "<group>"; };
+		AB558AD02454D1200069FB40 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
+		AB7261A824490DC70063F0BF /* Напоминания.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Напоминания.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7261AB24490DC70063F0BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7261AD24490DC70063F0BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB7261AF24490DC70063F0BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB7261AF24490DC70063F0BF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AB7261B224490DC70063F0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB7261B424490DC80063F0BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7261B724490DC80063F0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB7261B924490DC80063F0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB7F34F8245762D200C07C60 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AB7F34FA24771D7B00C07C60 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		AB7F34FC24771D9F00C07C60 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		AB7F34FE24771DBB00C07C60 /* ThirdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewCell.swift; sourceTree = "<group>"; };
+		AB7F350024771DD000C07C60 /* FourthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTableViewCell.swift; sourceTree = "<group>"; };
+		AB7F3502247AFFCC00C07C60 /* PriorityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityDetailViewController.swift; sourceTree = "<group>"; };
+		AB7F3506247B020400C07C60 /* PriorityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C687E52A011B17A0507B4D71 /* Pods-homework_24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework_24.debug.xcconfig"; path = "Target Support Files/Pods-homework_24/Pods-homework_24.debug.xcconfig"; sourceTree = "<group>"; };
+		E5C3AB941B7BC6816C23FA2E /* Pods-homework_24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework_24.release.xcconfig"; path = "Target Support Files/Pods-homework_24/Pods-homework_24.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +55,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E96416150EF800494B71A9 /* Pods_homework_24.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37ACE82BFDB4645446AD85BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65C3B60F5250C24D758CEA1D /* Pods_homework_24.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69E20A8A3160633E890A7587 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C687E52A011B17A0507B4D71 /* Pods-homework_24.debug.xcconfig */,
+				E5C3AB941B7BC6816C23FA2E /* Pods-homework_24.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AB72619F24490DC70063F0BF = {
 			isa = PBXGroup;
 			children = (
 				AB7261AA24490DC70063F0BF /* homework_24 */,
 				AB7261A924490DC70063F0BF /* Products */,
+				69E20A8A3160633E890A7587 /* Pods */,
+				37ACE82BFDB4645446AD85BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		AB7261A924490DC70063F0BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB7261A824490DC70063F0BF /* homework_24.app */,
+				AB7261A824490DC70063F0BF /* Напоминания.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +102,18 @@
 			children = (
 				AB7261AB24490DC70063F0BF /* AppDelegate.swift */,
 				AB7261AD24490DC70063F0BF /* SceneDelegate.swift */,
-				AB7261AF24490DC70063F0BF /* ViewController.swift */,
+				AB558AD02454D1200069FB40 /* UIViewController+Helpers.swift */,
+				AB7261AF24490DC70063F0BF /* MainViewController.swift */,
 				AB7261B124490DC70063F0BF /* Main.storyboard */,
+				AB7F3506247B020400C07C60 /* PriorityDetailTableViewCell.swift */,
+				AB7F3502247AFFCC00C07C60 /* PriorityDetailViewController.swift */,
+				AB7F34F8245762D200C07C60 /* InfoViewController.swift */,
+				AB558ACE2454CD0F0069FB40 /* ReminderInfo.swift */,
+				AB558ACC2454CAE00069FB40 /* MainTableViewCell.swift */,
+				AB7F34FA24771D7B00C07C60 /* FirstTableViewCell.swift */,
+				AB7F34FC24771D9F00C07C60 /* SecondTableViewCell.swift */,
+				AB7F34FE24771DBB00C07C60 /* ThirdTableViewCell.swift */,
+				AB7F350024771DD000C07C60 /* FourthTableViewCell.swift */,
 				AB7261B424490DC80063F0BF /* Assets.xcassets */,
 				AB7261B624490DC80063F0BF /* LaunchScreen.storyboard */,
 				AB7261B924490DC80063F0BF /* Info.plist */,
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB7261BC24490DC80063F0BF /* Build configuration list for PBXNativeTarget "homework_24" */;
 			buildPhases = (
+				1FAA28C65C4952347DD24BA9 /* [CP] Check Pods Manifest.lock */,
 				AB7261A424490DC70063F0BF /* Sources */,
 				AB7261A524490DC70063F0BF /* Frameworks */,
 				AB7261A624490DC70063F0BF /* Resources */,
+				EF0D0954D364739BCE580C45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +140,7 @@
 			);
 			name = homework_24;
 			productName = homework_24;
-			productReference = AB7261A824490DC70063F0BF /* homework_24.app */;
+			productReference = AB7261A824490DC70063F0BF /* Напоминания.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,14 +189,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FAA28C65C4952347DD24BA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-homework_24-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF0D0954D364739BCE580C45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-homework_24/Pods-homework_24-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-homework_24/Pods-homework_24-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-homework_24/Pods-homework_24-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB7261A424490DC70063F0BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7261B024490DC70063F0BF /* ViewController.swift in Sources */,
+				AB7F34FB24771D7B00C07C60 /* FirstTableViewCell.swift in Sources */,
+				AB7F34FD24771D9F00C07C60 /* SecondTableViewCell.swift in Sources */,
+				AB558ACD2454CAE00069FB40 /* MainTableViewCell.swift in Sources */,
+				AB7F3503247AFFCC00C07C60 /* PriorityDetailViewController.swift in Sources */,
+				AB7F34FF24771DBB00C07C60 /* ThirdTableViewCell.swift in Sources */,
+				AB558ACF2454CD0F0069FB40 /* ReminderInfo.swift in Sources */,
+				AB7261B024490DC70063F0BF /* MainViewController.swift in Sources */,
 				AB7261AC24490DC70063F0BF /* AppDelegate.swift in Sources */,
 				AB7261AE24490DC70063F0BF /* SceneDelegate.swift in Sources */,
+				AB7F3507247B020400C07C60 /* PriorityDetailTableViewCell.swift in Sources */,
+				AB7F34F9245762D200C07C60 /* InfoViewController.swift in Sources */,
+				AB558AD12454D1200069FB40 /* UIViewController+Helpers.swift in Sources */,
+				AB7F350124771DD000C07C60 /* FourthTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +390,7 @@
 		};
 		AB7261BD24490DC80063F0BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C687E52A011B17A0507B4D71 /* Pods-homework_24.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,7 +400,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-------------------.homework-24";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Напоминания";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +408,7 @@
 		};
 		AB7261BE24490DC80063F0BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C3AB941B7BC6816C23FA2E /* Pods-homework_24.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-------------------.homework-24";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Напоминания";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
