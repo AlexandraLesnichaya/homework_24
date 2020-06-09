@@ -14,6 +14,7 @@ class Reminder: Object {
     @objc dynamic var priorityDegree: String?
 }
 
-let realm = try! Realm()
+
+
 
 

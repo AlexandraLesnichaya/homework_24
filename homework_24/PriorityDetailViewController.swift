@@ -7,16 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PriorityDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let priorityDegrees: [String] = ["Нет", "Низкий", "Средний", "Высокий"]
+    let noPriority: String = "Нет"
 
-    var priority: String?
-    
-    let heightForFooter: CGFloat = 2.0
+    let priorityDegrees: [String] = ["Низкий", "Средний", "Высокий"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,21 +42,24 @@ extension PriorityDetailViewController: UITableViewDataSource, UITableViewDelega
         case 0:
             return 1
         case 1:
-            return priorityDegrees.count - 1
+            return priorityDegrees.count
         default:
             return 0
         }
     }
 
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
         switch section {
         case 0:
-            return heightForFooter
+            header.backgroundColor = UIColor.systemGroupedBackground
         case 1:
-            return 0
+            header.frame.size.height = 2
+            header.backgroundColor = UIColor.systemGray3
         default:
-            return 0
+            header.backgroundColor = UIColor.clear
         }
+        return header
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,15 +67,14 @@ extension PriorityDetailViewController: UITableViewDataSource, UITableViewDelega
 
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
 
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
-            cell.priorityDegreeLabel.text = priorityDegrees[0]
+            cell.priorityDegreeLabel.text = noPriority
         case 1:
-            cell.priorityDegreeLabel.text = priorityDegrees[1]
-        case 2:
-            cell.priorityDegreeLabel.text = priorityDegrees[2]
-        case 3:
-            cell.priorityDegreeLabel.text = priorityDegrees[3]
+            cell.priorityDegreeLabel.text = priorityDegrees[indexPath.row]
+            if indexPath.row == 2 {
+                cell.separatorInset = UIEdgeInsets(top: cell.bounds.minY, left: 0, bottom: cell.bounds.maxY, right: 0)
+            }
         default:
             return cell
         }
@@ -82,7 +83,6 @@ extension PriorityDetailViewController: UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-//        priority = tableView.cellForRow(at: indexPath)?.textLabel?.text
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

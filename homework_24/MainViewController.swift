@@ -15,7 +15,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
-    
 
     var tableCellsArray: [UITableViewCell] = []
     let tableCellToAdd = UITableViewCell()
@@ -29,13 +28,13 @@ class MainViewController: UIViewController {
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = UITableView.automaticDimension
     }
 
     private func configureTableView() {
         tableView.tableFooterView = UIView()
         toolbar.barTintColor = .systemBackground
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = UITableView.automaticDimension
     }
 
     private func doneButtonInvisibility() {
@@ -72,31 +71,18 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableCellsArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
-//                        let titleInCell = reminderInfo[indexPath.row].value(forKey: "title")
-//                        cell.titleLabel.text = titleInCell as? String
 //        cell.minHeight = 44
-//        let size = CGSize(width: cell.frame.width, height: .infinity)
-//        let estimatedSizeOfCell = cell.sizeThatFits(size)
-//        cell.constraints.forEach { (constraint) in
-//                   if constraint.firstAttribute == .height {
-//                       constraint.constant = estimatedSizeOfCell.height
-//                   }
-//        }
 
         tableView.cellForRow(at: indexPath)?.accessoryType = .detailButton
 
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -127,8 +113,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
         }
 
-        doneButton.isEnabled = true
-        doneButton.tintColor = .systemBlue
+        doneButtonVisibility()
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -137,8 +122,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         guard let infoViewController = InfoViewController.createFromMainStoryboard() else { return }
-        infoViewController.modalPresentationStyle = .automatic
-        self.present(infoViewController, animated: true, completion: nil)
+        let navigationInfoVC = UINavigationController(rootViewController: infoViewController)
+        navigationInfoVC.modalPresentationStyle = .automatic
+        self.present(navigationInfoVC, animated: true, completion: nil)
     }
 }
 

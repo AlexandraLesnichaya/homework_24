@@ -27,55 +27,71 @@ class InfoViewController: UIViewController {
     }
 
     @IBAction func doneButtonDidClick(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }
 
 extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        switch section {
-//        case 0:
-//            return 1
-//        case 1:
-//            return 1
-//        case 2:
-//            return 1
-//        case 3:
-//            return 1
-//        default:
-//            return 0
-//        }
         return 4
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell") as! FirstTableViewCell
-//            cell.reminderLabelForEditing.text = reminder?.title
-            return cell
-        } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTableViewCell") as! SecondTableViewCell
-            return cell
-        } else if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdTableViewCell") as! ThirdTableViewCell
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FourthTableViewCell") as! FourthTableViewCell
-            return cell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 1
+        case 2:
+            return 1
+        case 3:
+            return 1
+        default:
+            return 0
         }
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell") as! FirstTableViewCell
+
+        switch indexPath.section {
+        case 0:
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell") as! FirstTableViewCell
+            cell1.selectionStyle = .none
+            return cell1
+        case 1:
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "SecondTableViewCell") as! SecondTableViewCell
+            cell2.selectionStyle = .none
+            return cell2
+        case 2:
+            let cell3 = tableView.dequeueReusableCell(withIdentifier: "ThirdTableViewCell") as! ThirdTableViewCell
+            cell3.selectionStyle = .none
+            return cell3
+        case 3:
+            let cell4 = tableView.dequeueReusableCell(withIdentifier: "FourthTableViewCell") as! FourthTableViewCell
+            cell4.selectionStyle = .none
+            return cell4
+        default:
+            return cell1
+        }
+    }
+
+     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
+        header.backgroundColor = UIColor.systemGroupedBackground
+        header.layer.borderColor = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1.0).cgColor
+        header.layer.borderWidth = 0.25
+        return header
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 3 {
-//            tableView.cellForRow(at: indexPath)?.detailTextLabel.text = priorityDegree
+        if indexPath.section == 3 {
             guard let priorityDetailViewController = PriorityDetailViewController.createFromMainStoryboard() else { return }
-            priorityDetailViewController.modalPresentationStyle = .automatic
-            self.present(priorityDetailViewController, animated: true, completion: nil)
+            let navigationPriorityDetailVC = UINavigationController(rootViewController: priorityDetailViewController)
+            navigationPriorityDetailVC.modalPresentationStyle = .automatic
+            self.present(navigationPriorityDetailVC, animated: true, completion: nil)
         }
     }
 }
